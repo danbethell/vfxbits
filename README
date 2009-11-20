@@ -1,3 +1,20 @@
-This is a repository for all the miscellaneous bits & bobs of VFX code I don't have a better place for.
+This is a repository for all the miscellaneous bits & bobs of VFX code
+I don't have a better place for.
 
+All code is licensed under the Revised BSD license and is copyright the
+respective owner (where other opensource code has been
+included). Please refer to LICENSE for details of the Revised BSD
+license and individual source files for details of copyright ownership.
+
+__OIIOImageReader__
+This class inherits from Cortex IECore::ImageReader and provides
+imageloading via the OpenImageIO (OIIO) library.
+
+Example:
+    OIIOImageReader oiio_reader("test.hdr");
+    ImagePrimitivePtr oiio_image =
+        runTimeCast<ImagePrimitive>(oiio_reader.read());
+
+--
 dan
+< dan at pawfal dot org >
