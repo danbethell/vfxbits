@@ -70,7 +70,7 @@ OIIOImageReader::OIIOImageReader() :
 }
 
 OIIOImageReader::OIIOImageReader(const string &fileName) :
-	ImageReader( "OIIOImageReader", "Reads ILM OpenEXR file format." ),
+	ImageReader( "OIIOImageReader", "Reads a variety of file formats using the OIIO library." ),
 	m_inputFile( 0 ),
 	m_imageCache( 0 )
 {
@@ -154,9 +154,7 @@ std::string OIIOImageReader::sourceColorSpace() const
 bool OIIOImageReader::open( bool throwOnFailure )
 {
 	if ( m_inputFile ) // true if we already have an open image
-	{
 		return true;
-	}
 
 	try
 	{	 
