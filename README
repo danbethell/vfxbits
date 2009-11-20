@@ -15,6 +15,9 @@ Example:
     ImagePrimitivePtr oiio_image =
         runTimeCast<ImagePrimitive>(oiio_reader.read());
 
+__cmake__
+Some CMake modules for finding different libraries.
+
 --
 dan
 < dan at pawfal dot org >
