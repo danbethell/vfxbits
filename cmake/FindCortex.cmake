@@ -1,6 +1,6 @@
 #==========
 #
-# Copyright (c) 2009, Dan Bethell.
+# Copyright (c) 2010, Dan Bethell.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -34,42 +34,33 @@
 #==========
 #
 # Variables defined by this module:
-#   OpenImageIO_FOUND    
-#   OpenImageIO_INCLUDE_DIR
-#   OpenImageIO_LIBRARY
+#   Cortex_FOUND    
+#   Cortex_INCLUDE_DIR
+#   Cortex_LIBRARIES
 #
 # Usage: 
-#   FIND_PACKAGE( OpenImageIO )
-#   FIND_PACKAGE( OpenImageIO REQUIRED )
+#   FIND_PACKAGE( Cortex )
+#   FIND_PACKAGE( Cortex REQUIRED )
 #
-# Note:
-# OpenImageIO is often not installed in a system location. 
-# If this is the case, set the IMAGEIO_PATH envvar or 
-# OpenImageIO_INSTALL_PATH cmake variable before calling 
-# FIND_PACKAGE.
-# 
-# E.g. 
-#   SET( OpenImageIO_INSTALL_PATH "/path/to/oiio/dist/linux64" )
-#   FIND_PACKAGE( OpenImageIO REQUIRED )
+# Todo: add support for finding additional components
+# (more than just IECore) using a mechanism similar to Boost's 
+# cmake module.
 #
 #==========
 
 # try to find header
-FIND_PATH( OpenImageIO_INCLUDE_DIR OpenImageIO/imageio.h
-  $ENV{IMAGEIO_PATH}/include
-  ${OpenImageIO_INSTALL_PATH}/include
+FIND_PATH( Cortex_INCLUDE_DIR IECore/IECore.h
+  ${Cortex_INSTALL_PATH}/include
   )
 
 # try to find libs
-FIND_LIBRARY( OpenImageIO_LIBRARY OpenImageIO
-  $ENV{IMAGEIO_PATH}/lib
-  $ENV{IMAGEIO_LIBRARY_PATH}
-  ${OpenImageIO_INSTALL_PATH}/lib
+FIND_LIBRARY( Cortex_LIBRARY IECore
+  ${Cortex_INSTALL_PATH}/lib
   )
 
 # did we find everything?
 INCLUDE( FindPackageHandleStandardArgs )
-FIND_PACKAGE_HANDLE_STANDARD_ARGS( "OpenImageIO" DEFAULT_MSG
-  OpenImageIO_INCLUDE_DIR
-  OpenImageIO_LIBRARY
+FIND_PACKAGE_HANDLE_STANDARD_ARGS( "Cortex" DEFAULT_MSG
+  Cortex_INCLUDE_DIR
+  Cortex_LIBRARY
   )

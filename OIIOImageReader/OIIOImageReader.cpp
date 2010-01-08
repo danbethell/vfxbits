@@ -45,8 +45,6 @@
 
 #include <boost/format.hpp>
 
-#include <imageio.h>
-
 #include <algorithm>
 #include <fstream>
 #include <iostream>

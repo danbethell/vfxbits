@@ -38,7 +38,7 @@
 #define IE_CORE_OIIOIMAGEREADER_H
 
 #include "IECore/ImageReader.h"
-#include <imageio.h>
+#include <OpenImageIO/imageio.h>
 
 namespace IECore
 {
