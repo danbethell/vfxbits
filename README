@@ -2,9 +2,9 @@ This is a repository for all the miscellaneous bits & bobs of VFX code
 I don't have a better place for.
 
 All code is licensed under the Revised BSD license and is copyright the
-respective owner (where other opensource code has been
-included). Please refer to LICENSE for details of the Revised BSD
-license and individual source files for details of copyright ownership.
+respective owner (where other opensource code has been included). Please 
+refer to LICENSE for details of the Revised BSD license and individual 
+source files for details of copyright ownership.
 
 __OIIOImageReader__
 This class inherits from Cortex IECore::ImageReader and provides
@@ -18,6 +18,9 @@ Example:
 __cmake__
 Some CMake modules for finding different libraries.
 
+__rman__
+Miscellaneous RenderMan stuff... shaders & dso's.
+
 --
 dan
-< dan at pawfal dot org >
+< danbethell at gmail dot com >
