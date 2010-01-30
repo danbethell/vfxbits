@@ -50,13 +50,13 @@ FIND_PATH( OpenCL_INCLUDE_DIR CL/cl.h
   )
 
 # try to find libs
-FIND_LIBRARY( OpenCL_LIBRARY OpenCL
+FIND_LIBRARY( OpenCL_LIBRARIES OpenCL
   ${OpenCL_INSTALL_PATH}/lib
   )
 
 # did we find everything?
 INCLUDE( FindPackageHandleStandardArgs )
 FIND_PACKAGE_HANDLE_STANDARD_ARGS( "OpenCL" DEFAULT_MSG
+  OpenCL_LIBRARIES
   OpenCL_INCLUDE_DIR
-  OpenCL_LIBRARY
   )
