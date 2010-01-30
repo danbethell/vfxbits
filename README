@@ -21,6 +21,9 @@ Some CMake modules for finding different libraries.
 __rman__
 Miscellaneous RenderMan stuff... shaders & dso's.
 
+__houdini__
+Houdini stuff... scripts etc.
+
 --
 dan
 < danbethell at gmail dot com >
