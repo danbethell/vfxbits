@@ -1,0 +1,66 @@
+# GENERAL INSTALL OPTIONS
+VFXLIBS="/Users/dan/vfx"
+INSTALL_TYPE="base"
+INSTALL_VERSION="5.10.0"
+INSTALL_PREFIX=VFXLIBS+"/cortex/"+INSTALL_VERSION+"/"+INSTALL_TYPE
+#CXX="g++"
+#CXXFLAGS=[ "-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-arch", "x86_64", "-D__x86_64__", "-D__USE_ISOC99", "-pthread" ]
+CXXFLAGS=[ "-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-D__x86_64__", "-D__USE_ISOC99", "-pthread" ]
+PYTHONCXXFLAGS=CXXFLAGS
+#LINKFLAGS=[ "-arch", "x86_64", "-Wall" ]
+WITH_GL=1
+
+# PYTHON (2.6)
+PYTHON_CONFIG="/usr/bin/python2.6-config"
+
+# BOOST (1.43.0)
+BOOST_INCLUDE_PATH=VFXLIBS+"/boost/1.43.0/include"
+BOOST_LIB_PATH=VFXLIBS+"/boost/1.43.0/lib"
+BOOST_LIB_SUFFIX=""
+
+# TBB (2.2)
+TBB_INCLUDE_PATH=VFXLIBS+"/tbb/2.2/include/"
+TBB_LIB_PATH=VFXLIBS+"/tbb/2.2/lib"
+
+# ILMBASE (1.0.1)
+ILMBASE_INCLUDE_PATH=VFXLIBS+"/ilmbase/1.0.1/include"
+ILMBASE_LIB_PATH=VFXLIBS+"/ilmbase/1.0.1/lib"
+
+# OPENEXR (1.6.1)
+OPENEXR_INCLUDE_PATH=VFXLIBS+"/openexr/1.6.1/include"
+OPENEXR_LIB_PATH=VFXLIBS+"/openexr/1.6.1/lib"
+
+# JPEG (8b)
+JPEG_INCLUDE_PATH=VFXLIBS+"/jpeg/8b/include"
+JPEG_LIB_PATH=VFXLIBS+"/jpeg/8b/lib"
+
+# TIFF (3.9.4)
+TIFF_INCLUDE_PATH=VFXLIBS+"/tiff/3.9.4/include"
+TIFF_LIB_PATH=VFXLIBS+"/tiff/3.9.4/lib"
+
+# FREETYPE (2.3.12)
+FREETYPE_INCLUDE_PATH=[ VFXLIBS+"/freetype/2.3.12/include", VFXLIBS+"/freetype/2.3.12/include/freetype2" ]
+FREETYPE_LIB_PATH=VFXLIBS+"/freetype/2.3.12/lib"
+
+# GLEW (1.5.4)
+GLEW_INCLUDE_PATH=VFXLIBS+"/glew/1.5.4/include/GL"
+GLEW_LIB_PATH=VFXLIBS+"/glew/1.5.4/lib"
+
+# GLUT (Apple X11)
+GLUT_INCLUDE_PATH="/usr/X11/include"
+GLUT_LIB_PATH="/usr/X11/lib"
+
+# DOXYGEN (1.7.1)
+DOXYGEN="/usr/local/bin/doxygen"
+
+# 3DELIGHT (9.0.45 X86_64)
+#RMAN_ROOT="/Applications/Graphics/3Delight-9.0.45"
+
+# HOUDINI (10.0.595)
+# HOUDINI_ROOT="/Library/Frameworks/Houdini.framework/Versions/10.0.595"
+# HOUDINI_INCLUDE_PATH="$HOUDINI_ROOT/Resources/toolkit/include"
+# HOUDINI_LIB_PATH="$HOUDINI_ROOT/Libraries"
+# HOUDINI_BIN_PATH="$HOUDINI_ROOT/Resources/bin"
+# HOUDINI_CXX_FLAGS="-DVERSION=\"10.0.595\" -DDLLEXPORT=  -D_GNU_SOURCE -DMBSD -DMBSD_COCOA -DMBSD_INTEL -arch x86_64 -DAMD64 -fPIC -DSIZEOF_VOID_P=8 -DSESI_LITTLE_ENDIAN -DENABLE_THREADS -DUSE_PTHREADS -D_REENTRANT -D_FILE_OFFSET_BITS=64 -fobjc-gc-only -c -DGCC4 -DGCC3 -Wno-deprecated -Wall -W -Wno-parentheses -Wno-sign-compare -Wno-reorder -Wno-uninitialized -Wunused -Wno-unused-parameter -O2 -DMAKING_DSO"
+
+
