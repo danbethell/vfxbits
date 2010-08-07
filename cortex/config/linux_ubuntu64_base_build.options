@@ -1,15 +1,16 @@
 #=====
 # - CORTEX 5.10.0
-# - MAC OS X 10.6 
+# - LINUX UBUNTU 10.04 64-bit
 # - BASE configuration
 #=====
 
 # GENERAL INSTALL OPTIONS
-VFXLIBS="/Users/dan/vfx"
+VFXLIBS="/home/dan/vfx"
 INSTALL_TYPE="base"
 INSTALL_VERSION="5.10.0"
 INSTALL_PREFIX=VFXLIBS+"/cortex/"+INSTALL_VERSION+"/"+INSTALL_TYPE
-CXXFLAGS=[ "-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-D__x86_64__", "-D__USE_ISOC99", "-pthread" ]
+CXX="g++-4.1"
+CXXFLAGS=[ "-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-pthread" ]
 PYTHONCXXFLAGS=CXXFLAGS
 WITH_GL=1
 
@@ -47,11 +48,11 @@ FREETYPE_LIB_PATH=VFXLIBS+"/freetype/2.3.12/lib"
 
 # GLEW (1.5.4)
 GLEW_INCLUDE_PATH=VFXLIBS+"/glew/1.5.4/include/GL"
-GLEW_LIB_PATH=VFXLIBS+"/glew/1.5.4/lib"
+GLEW_LIB_PATH=VFXLIBS+"/glew/1.5.4/lib64"
 
-# GLUT (Apple X11)
-GLUT_INCLUDE_PATH="/usr/X11/include"
-GLUT_LIB_PATH="/usr/X11/lib"
+# GLUT (2.6.0)
+GLUT_INCLUDE_PATH=VFXLIBS+"/freeglut/2.6.0/include"
+GLUT_LIB_PATH=VFXLIBS+"/freeglut/2.6.0/lib"
 
 # DOXYGEN (1.7.1)
-DOXYGEN="/usr/local/bin/doxygen"
+DOXYGEN="/usr/bin/doxygen"
