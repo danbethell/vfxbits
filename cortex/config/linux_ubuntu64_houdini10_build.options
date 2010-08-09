@@ -1,11 +1,11 @@
 #=====
 # - CORTEX 5.10.0
 # - LINUX UBUNTU 10.04 64-bit
-# - BASE configuration
+# - HOUDINI10 configuration
 #=====
 
 # TYPE/VERSION
-INSTALL_TYPE="base"
+INSTALL_TYPE="houdini10"
 INSTALL_VERSION="5.10.0"
 
 # LOCATIONS
@@ -18,13 +18,14 @@ CXXFLAGS=[ "-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-pth
 PYTHONCXXFLAGS=CXXFLAGS
 WITH_GL=1
 
-# PYTHON (2.6)
-PYTHON_CONFIG="/usr/bin/python2.6-config"
+# PYTHON (2.5.5 UCS4)
+PYTHON_CONFIG=VFXLIBS+"/python/2.5.5/bin/python-config"
+PYTHON_LINK_FLAGS="-L"+VFXLIBS+"/python/2.5.5/lib -lpthread -ldl -lutil -lm -lpython2.5"
 
-# BOOST (1.43.0)
-BOOST_INCLUDE_PATH=VFXLIBS+"/boost/1.43.0/include"
-BOOST_LIB_PATH=VFXLIBS+"/boost/1.43.0/lib"
-BOOST_LIB_SUFFIX=""
+# BOOST (1.33.1)
+BOOST_INCLUDE_PATH=VFXLIBS+"/boost/1.33.1/include/boost-1_33_1"
+BOOST_LIB_PATH=VFXLIBS+"/boost/1.33.1/lib"
+BOOST_LIB_SUFFIX="-gcc-mt-1_33_1"
 
 # TBB (2.2)
 TBB_INCLUDE_PATH=VFXLIBS+"/tbb/2.2/include/"
@@ -60,3 +61,11 @@ GLUT_LIB_PATH=VFXLIBS+"/freeglut/2.6.0/lib"
 
 # DOXYGEN (1.7.1)
 DOXYGEN="/usr/bin/doxygen"
+
+# 3DELIGHT (9.0.57)
+RMAN_ROOT=VFXLIBS+"/3delight/9.0.57/3delight-9.0.57/Linux-x86_64"
+
+# HOUDINI (10.0.595)
+HOUDINI_ROOT=VFXLIBS+"/houdini/10.0.595"
+HOUDINI_CXX_FLAGS="-DNEED_SPECIALIZATION_STORAGE -DVERSION=\"10.0.595\" -DDLLEXPORT=  -D_GNU_SOURCE -DLINUX -DAMD64 -m64 -fPIC -DSIZEOF_VOID_P=8 -DSESI_LITTLE_ENDIAN -DENABLE_THREADS -DUSE_PTHREADS -D_REENTRANT -D_FILE_OFFSET_BITS=64 -c  -DGCC4 -DGCC3 -Wno-deprecated -I/home/dan/vfx/houdini/10.0.595/toolkit/include -I/home/dan/vfx/houdini/10.0.595/toolkit/include/htools -Wall -W -Wno-parentheses -Wno-sign-compare -Wno-reorder -Wno-uninitialized -Wunused -Wno-unused-parameter -O2 -DMAKING_DSO"
+HOUDINI_LINK_FLAGS="-L/usr/X11R6/lib -lGLU -lGL -lX11 -lXext -lXi -ldl"
