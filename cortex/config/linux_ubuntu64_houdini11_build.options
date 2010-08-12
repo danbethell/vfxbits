@@ -1,0 +1,145 @@
+#=====
+# - CORTEX 5.10.0
+# - LINUX UBUNTU 10.04 64-bit
+# - HOUDINI11 configuration
+#=====
+
+# TYPE/VERSION
+INSTALL_TYPE="houdini11"
+INSTALL_VERSION="5.10.0"
+
+# LOCATIONS
+VFXLIBS="/home/dan/vfx"
+INSTALL_PREFIX=VFXLIBS+"/cortex/"+INSTALL_VERSION+"/"+INSTALL_TYPE
+
+# FLAGS & OPTIONS
+CXX="g++-4.1"
+CXXFLAGS=[ "-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-pthread" ]
+PYTHONCXXFLAGS=CXXFLAGS
+WITH_GL=1
+
+# PYTHON (2.5.5 UCS4)
+PYTHON_CONFIG=VFXLIBS+"/python/2.5.5/bin/python-config"
+PYTHON_LINK_FLAGS="-L"+VFXLIBS+"/python/2.5.5/lib -lpthread -ldl -lutil -lm -lpython2.5"
+
+# BOOST (1.37.0)
+BOOST_INCLUDE_PATH=VFXLIBS+"/boost/1.37.0/include/boost-1_37"
+BOOST_LIB_PATH=VFXLIBS+"/boost/1.37.0/lib"
+BOOST_LIB_SUFFIX="-gcc41-mt"
+
+# TBB (3.0)
+TBB_INCLUDE_PATH=VFXLIBS+"/tbb/2.2/include/"
+TBB_LIB_PATH=VFXLIBS+"/tbb/2.2/lib"
+
+# ILMBASE (1.0.1)
+ILMBASE_INCLUDE_PATH=VFXLIBS+"/ilmbase/1.0.1/include"
+ILMBASE_LIB_PATH=VFXLIBS+"/ilmbase/1.0.1/lib"
+
+# OPENEXR (1.6.1)
+OPENEXR_INCLUDE_PATH=VFXLIBS+"/openexr/1.6.1/include"
+OPENEXR_LIB_PATH=VFXLIBS+"/openexr/1.6.1/lib"
+
+# JPEG (8b)
+JPEG_INCLUDE_PATH=VFXLIBS+"/jpeg/8b/include"
+JPEG_LIB_PATH=VFXLIBS+"/jpeg/8b/lib"
+
+# TIFF (3.9.4)
+TIFF_INCLUDE_PATH=VFXLIBS+"/tiff/3.9.4/include"
+TIFF_LIB_PATH=VFXLIBS+"/tiff/3.9.4/lib"
+
+# FREETYPE (2.3.12)
+FREETYPE_INCLUDE_PATH=[ VFXLIBS+"/freetype/2.3.12/include", VFXLIBS+"/freetype/2.3.12/include/freetype2" ]
+FREETYPE_LIB_PATH=VFXLIBS+"/freetype/2.3.12/lib"
+
+# GLEW (1.5.4)
+GLEW_INCLUDE_PATH=VFXLIBS+"/glew/1.5.4/include/GL"
+GLEW_LIB_PATH=VFXLIBS+"/glew/1.5.4/lib64"
+
+# GLUT (2.6.0)
+GLUT_INCLUDE_PATH=VFXLIBS+"/freeglut/2.6.0/include"
+GLUT_LIB_PATH=VFXLIBS+"/freeglut/2.6.0/lib"
+
+# DOXYGEN (1.7.1)
+DOXYGEN="/usr/bin/doxygen"
+
+# 3DELIGHT (9.0.57)
+RMAN_ROOT=VFXLIBS+"/3delight/9.0.57/3delight-9.0.57/Linux-x86_64"
+
+# HOUDINI (11.0.446.9)
+HOUDINI_ROOT=VFXLIBS+"/houdini/11.0.446.9"
+HOUDINI_CXX_FLAGS="-DVERSION=\"11.0.446.9\" -DDLLEXPORT= -D_GNU_SOURCE -DLINUX -DAMD64 -m64 -fPIC -DSIZEOF_VOID_P=8 -DSESI_LITTLE_ENDIAN -DENABLE_THREADS -DUSE_PTHREADS -D_REENTRANT -D_FILE_OFFSET_BITS=64 -c -DGCC4 -DGCC3 -Wno-deprecated -I/home/dan/vfx/houdini/11.0.446.9/toolkit/include -I/home/dan/vfx/houdini/11.0.446.9/toolkit/include/htools -Wall -W -Wno-parentheses -Wno-sign-compare -Wno-reorder -Wno-uninitialized -Wunused -Wno-unused-parameter -O2"
+HOUDINI_LINK_FLAGS="-L/usr/X11R6/lib -lGLU -lGL -lX11 -lXext -lXi -ldl"
+
+'''
+#=====
+# - CORTEX 5.10.0
+# - LINUX UBUNTU 10.04 64-bit
+# - HOUDINI10 configuration
+#=====
+
+# TYPE/VERSION
+INSTALL_TYPE="houdini10"
+INSTALL_VERSION="5.10.0"
+
+# LOCATIONS
+VFXLIBS="/home/dan/vfx"
+INSTALL_PREFIX=VFXLIBS+"/cortex/"+INSTALL_VERSION+"/"+INSTALL_TYPE
+
+# FLAGS & OPTIONS
+CXX="g++-4.1"
+CXXFLAGS=[ "-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-pthread" ]
+PYTHONCXXFLAGS=CXXFLAGS
+WITH_GL=1
+
+# PYTHON (2.5.5 UCS4)
+PYTHON_CONFIG=VFXLIBS+"/python/2.5.5/bin/python-config"
+PYTHON_LINK_FLAGS="-L"+VFXLIBS+"/python/2.5.5/lib -lpthread -ldl -lutil -lm -lpython2.5"
+
+# BOOST (1.33.1)
+BOOST_INCLUDE_PATH=VFXLIBS+"/boost/1.33.1/include/boost-1_33_1"
+BOOST_LIB_PATH=VFXLIBS+"/boost/1.33.1/lib"
+BOOST_LIB_SUFFIX="-gcc-mt-1_33_1"
+
+# TBB (2.2)
+TBB_INCLUDE_PATH=VFXLIBS+"/tbb/2.2/include/"
+TBB_LIB_PATH=VFXLIBS+"/tbb/2.2/lib"
+
+# ILMBASE (1.0.1)
+ILMBASE_INCLUDE_PATH=VFXLIBS+"/ilmbase/1.0.1/include"
+ILMBASE_LIB_PATH=VFXLIBS+"/ilmbase/1.0.1/lib"
+
+# OPENEXR (1.6.1)
+OPENEXR_INCLUDE_PATH=VFXLIBS+"/openexr/1.6.1/include"
+OPENEXR_LIB_PATH=VFXLIBS+"/openexr/1.6.1/lib"
+
+# JPEG (8b)
+JPEG_INCLUDE_PATH=VFXLIBS+"/jpeg/8b/include"
+JPEG_LIB_PATH=VFXLIBS+"/jpeg/8b/lib"
+
+# TIFF (3.9.4)
+TIFF_INCLUDE_PATH=VFXLIBS+"/tiff/3.9.4/include"
+TIFF_LIB_PATH=VFXLIBS+"/tiff/3.9.4/lib"
+
+# FREETYPE (2.3.12)
+FREETYPE_INCLUDE_PATH=[ VFXLIBS+"/freetype/2.3.12/include", VFXLIBS+"/freetype/2.3.12/include/freetype2" ]
+FREETYPE_LIB_PATH=VFXLIBS+"/freetype/2.3.12/lib"
+
+# GLEW (1.5.4)
+GLEW_INCLUDE_PATH=VFXLIBS+"/glew/1.5.4/include/GL"
+GLEW_LIB_PATH=VFXLIBS+"/glew/1.5.4/lib64"
+
+# GLUT (2.6.0)
+GLUT_INCLUDE_PATH=VFXLIBS+"/freeglut/2.6.0/include"
+GLUT_LIB_PATH=VFXLIBS+"/freeglut/2.6.0/lib"
+
+# DOXYGEN (1.7.1)
+DOXYGEN="/usr/bin/doxygen"
+
+# 3DELIGHT (9.0.57)
+RMAN_ROOT=VFXLIBS+"/3delight/9.0.57/3delight-9.0.57/Linux-x86_64"
+
+# HOUDINI (10.0.595)
+HOUDINI_ROOT=VFXLIBS+"/houdini/10.0.595"
+HOUDINI_CXX_FLAGS="-DNEED_SPECIALIZATION_STORAGE -DVERSION=\"10.0.595\" -DDLLEXPORT=  -D_GNU_SOURCE -DLINUX -DAMD64 -m64 -fPIC -DSIZEOF_VOID_P=8 -DSESI_LITTLE_ENDIAN -DENABLE_THREADS -DUSE_PTHREADS -D_REENTRANT -D_FILE_OFFSET_BITS=64 -c  -DGCC4 -DGCC3 -Wno-deprecated -I/home/dan/vfx/houdini/10.0.595/toolkit/include -I/home/dan/vfx/houdini/10.0.595/toolkit/include/htools -Wall -W -Wno-parentheses -Wno-sign-compare -Wno-reorder -Wno-uninitialized -Wunused -Wno-unused-parameter -O2 -DMAKING_DSO"
+HOUDINI_LINK_FLAGS="-L/usr/X11R6/lib -lGLU -lGL -lX11 -lXext -lXi -ldl"
+'''
