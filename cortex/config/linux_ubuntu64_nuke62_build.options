@@ -1,0 +1,54 @@
+#=====
+# - CORTEX 6.0.0
+# - Nuke 6.2 configuration
+# - LINUX UBUNTU 10.10/11.04 64-bit
+# - All libs installed using Ubuntu package manager except:
+#      Boost 1.45.0
+#      3Delight 9.0.83
+#      Nuke 6.2v2
+#=====
+
+# TYPE/VERSION
+INSTALL_TYPE="nuke62"
+INSTALL_VERSION="${IECORE_MAJOR_VERSION}.${IECORE_MINOR_VERSION}.${IECORE_PATCH_VERSION}"
+
+# LOCATIONS
+VFXLIBS="/home/dan/vfx"
+INSTALL_PREFIX=VFXLIBS+"/cortex/"+INSTALL_VERSION+"/"+INSTALL_TYPE
+
+# FLAGS & OPTIONS
+CXX="g++"
+CXXFLAGS=[ "-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-pthread" ]
+PYTHONCXXFLAGS=CXXFLAGS
+WITH_GL=True
+INSTALL_PKG_CONFIG_FILE=True
+HOUDINI_ROOT=""
+
+# PYTHON
+PYTHON_CONFIG="/usr/bin/python2.6-config"
+
+# BOOST (1.45.0)
+BOOST_INCLUDE_PATH=VFXLIBS+"/boost/1.45.0/include"
+BOOST_LIB_PATH=VFXLIBS+"/boost/1.45.0/lib"
+BOOST_LIB_SUFFIX=""
+
+# ILMBASE
+ILMBASE_INCLUDE_PATH="/usr/include"
+
+# OPENEXR
+OPENEXR_INCLUDE_PATH="/usr/include"
+
+# FREETYPE
+FREETYPE_INCLUDE_PATH=["/usr/include/freetype2", "/usr/include"]
+
+# GLEW
+GLEW_INCLUDE_PATH="/usr/include/GL"
+
+# DOXYGEN
+DOXYGEN="/usr/bin/doxygen"
+
+# 3DELIGHT (9.0.83)
+RMAN_ROOT=VFXLIBS+"/3delight/9.0.83/3delight-9.0.83/Linux-x86_64"
+
+# NUKE (6.2v2)
+NUKE_ROOT="/usr/local/Nuke6.2v2"
