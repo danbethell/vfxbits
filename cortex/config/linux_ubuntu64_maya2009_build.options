@@ -1,9 +1,8 @@
 #=====
-# - CORTEX 6.0.0
 # - MAYA2009 configuration
-# - LINUX UBUNTU 10.10/11.04 64-bit
+# - LINUX UBUNTU 10.10 64-bit
 # - All libs installed using Ubuntu package manager except:
-#      Python 2.5.5 UCS4
+#      Python 2.5.5 UCS4 (gcc-4.1)
 #      Boost 1.38.0
 #      3Delight 9.0.99
 #      Maya 2009
@@ -26,7 +25,6 @@ INSTALL_PKG_CONFIG_FILE=True
 
 # PYTHON
 PYTHON_CONFIG=VFXLIBS+"/python/2.5.5_gcc4.1/bin/python-config"
-#PYTHON_LINK_FLAGS="-L"+VFXLIBS+"/python/2.5.5_gcc4.1/lib/python/config -lpthread -ldl -lutil -lm -lpython2.5"
 
 # BOOST
 BOOST_INCLUDE_PATH=VFXLIBS+"/boost/1.38.0_gcc4.1/include/boost-1_38"

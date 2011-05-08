@@ -1,11 +1,10 @@
 #=====
-# - CORTEX 6.0.0
 # - HOUDINI11 configuration
-# - LINUX UBUNTU 10.10/11.04 64-bit
+# - LINUX UBUNTU 10.10 64-bit
 # - All libs installed using Ubuntu package manager except:
 #      Python 2.5.5 UCS4
 #      Boost 1.37.0
-#      3Delight 9.0.83
+#      3Delight 9.0.99
 #      Houdini 11.0
 #=====
 
@@ -26,7 +25,6 @@ INSTALL_PKG_CONFIG_FILE=True
 
 # PYTHON
 PYTHON_CONFIG=VFXLIBS+"/python/2.5.5/bin/python-config"
-PYTHON_LINK_FLAGS="-L"+VFXLIBS+"/python/2.5.5/lib -lpthread -ldl -lutil -lm -lpython2.5"
 
 # BOOST
 BOOST_INCLUDE_PATH=VFXLIBS+"/boost/1.37.0/include/boost-1_37"
