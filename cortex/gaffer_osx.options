@@ -1,0 +1,10 @@
+BUILD_DEPENDENCIES=False
+BUILD_DIR="/Users/dan/code/cortex-osx/VFXLIBS"
+#LOCATE_DEPENDENCY_CPPPATH=["${BUILD_DIR}/include"]
+#LOCATE_DEPENDENCY_SYSTEMPATH=["$VFXLIBS/include"]
+#LOCATE_DEPENDENCY_LIBPATH=["$VFXLIBS/lib"]
+CXXFLAGS=[ "-pipe", "-Wall", "-Werror", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-fpermissive"]
+RMAN_ROOT="/Applications/Graphics/3Delight-10.0.50"
+INKSCAPE="/Applications/Inkscape.app/Contents/Resources/bin/inkscape"
+ARNOLD_ROOT=""
+PACKAGE_FILE="gaffer.dmg"

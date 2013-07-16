@@ -1,0 +1,29 @@
+#=====
+# - CORTEX 8.0.0
+# - MAC OS X
+#=====
+
+VFXLIBS="/Users/dan/code/cortex-osx/vfxlibs"
+CXXFLAGS=["-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-fpermissive"]
+TESTCXXFLAGS=["-pipe", "-Wall", "-O0", "-fpermissive"]
+PYTHONCXXFLAGS=CXXFLAGS
+
+INSTALL_PREFIX=VFXLIBS
+LIBPATH=VFXLIBS+"/lib"
+
+INSTALL_PYTHON_DIR=VFXLIBS+"/python"
+
+INSTALL_IECORE_OPS=""
+PYTHON_CONFIG=VFXLIBS+"/bin/python-config"
+
+BOOST_INCLUDE_PATH=VFXLIBS+"/include/boost"
+BOOST_LIB_SUFFIX=""
+
+OPENEXR_INCLUDE_PATH=VFXLIBS+"/include"
+FREETYPE_INCLUDE_PATH=VFXLIBS+"/include/freetype2"
+FREETYPE_LIB_PATH=VFXLIBS+"/lib"
+WITH_GL=1
+GLEW_INCLUDE_PATH=VFXLIBS+"/include/GL"
+ALEMBIC_INCLUDE_PATH=VFXLIBS+"/alembic-1.1.5/include"
+ALEMBIC_LIB_PATH=VFXLIBS+"/alembic-1.1.5/lib/static"
+RMAN_ROOT="/Applications/Graphics/3Delight-10.0.50"
