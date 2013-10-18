@@ -1,0 +1,41 @@
+#=====
+# - CORTEX 8.0.0
+# - MAC OS X
+#=====
+
+VFXLIBS="/home/dan/code/vfx/vfxlibs"
+LIBPATH=VFXLIBS+"/lib"
+CXXFLAGS=["-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-fpermissive"]
+TESTCXXFLAGS=["-pipe", "-Wall", "-O0"]
+PYTHONCXXFLAGS=CXXFLAGS
+
+# BUILD_REPORT="cortex_build_report.log"
+
+INSTALL_PREFIX=VFXLIBS
+LIBPATH=VFXLIBS+"/lib"
+
+INSTALL_PYTHON_DIR=VFXLIBS+"/python"
+
+INSTALL_IECORE_OPS=""
+PYTHON_CONFIG=VFXLIBS+"/bin/python-config"
+
+BOOST_INCLUDE_PATH=VFXLIBS+"/include/boost"
+BOOST_LIB_SUFFIX=""
+
+OPENEXR_INCLUDE_PATH=VFXLIBS+"/include"
+FREETYPE_INCLUDE_PATH=VFXLIBS+"/include/freetype2"
+FREETYPE_LIB_PATH=VFXLIBS+"/lib"
+WITH_GL=1
+GLEW_INCLUDE_PATH=VFXLIBS+"/include/GL"
+
+ALEMBIC_INCLUDE_PATH=VFXLIBS+"/alembic-1.5.1/include"
+ALEMBIC_LIB_PATH=VFXLIBS+"/alembic-1.5.1/lib/static"
+
+DOXYGEN="/usr/bin/doxygen"
+
+#MAYA_ROOT="/method/ext_packages/maya/2013.5/Linux/x86_64/ext"
+#NUKE_ROOT="/method/ext_packages/nuke/7.0.6/Linux/x86_64/ext"
+#HOUDINI_ROOT="/method/ext_packages/houdini/12.5.469/ext"
+#RMAN_ROOT="/method/ext_packages/prman/18.0.1214707/Linux/x86_64/ext"
+#ARNOLD_ROOT="/method/ext_packages/arnold/4.0.7.1/ext"
+

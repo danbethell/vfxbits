@@ -1,0 +1,6 @@
+BUILD_DEPENDENCIES=False
+BUILD_DIR="/home/dan/code/vfx/vfxlibs"
+LOCATE_DEPENDENCY_CPPPATH=["${BUILD_DIR}/include"]
+LOCATE_DEPENDENCY_SYSTEMPATH=["${BUILD_DIR}/include"]
+LOCATE_DEPENDENCY_LIBPATH=["${BUILD_DIR}/lib"]
+CXXFLAGS=[ "-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-fpermissive"]
