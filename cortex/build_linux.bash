@@ -4,16 +4,17 @@
 # Build on Linux x64
 #=====
 # System Requirements
-# GCC
-# Bash
-# Csh
-# Zlib (dev)
-# BZip2 (dev)
-# Inkscape
-# Doxygen
-# LLVM (dev)
-# Flex 
-# Bison
+# GCC (gcc)
+# Bash (bash)
+# Csh (csh)
+# Inkscape (inkscape)
+# Doxygen (doxygen)
+# Flex (flex)
+# Bison (bison)
+# Zlib (zlib1g-dev)
+# BZip2 (libbz2-dev)
+# LLVM (llvm-dev)
+# Fontconfig (libfontconfig1-dev)
 
 CWD=`pwd`
 TARBALL=`pwd`/tarballs
@@ -221,4 +222,4 @@ scons test OPTIONS=$CONFIG/cortex_linux.options
 cd $STAGING
 git clone https://github.com/ImageEngine/gaffer.git
 cd $STAGING/gaffer
-scons OPTIONS=$CONFIG/gaffer_linux.options
+scons build -j 8 OPTIONS=$CONFIG/gaffer_linux.options

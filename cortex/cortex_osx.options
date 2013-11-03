@@ -3,7 +3,7 @@
 # - MAC OS X
 #=====
 
-VFXLIBS="/Users/dan/code/cortex-osx/vfxlibs"
+VFXLIBS="/net_home/dan.bethell/dev/vfxlibs/vfxlibs"
 CXXFLAGS=["-pipe", "-Wall", "-O2", "-DNDEBUG", "-DBOOST_DISABLE_ASSERTS", "-fpermissive"]
 TESTCXXFLAGS=["-pipe", "-Wall", "-O0", "-fpermissive"]
 PYTHONCXXFLAGS=CXXFLAGS
